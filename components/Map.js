@@ -44,12 +44,10 @@ function Map({searchResults}){
                         arial-label="push-pin"
                     >📍</p>
                 </Marker>
-                {console.log("selectedLocation.long"+selectedLocation.long)}
-                {console.log("result.long"+result.long)}
                 {selectedLocation.long == result.long ? (
                     <Popup 
                         onClose={() => setSelectedLocation({})}
-                        closeOnClick={true}
+                        closeOnClick={false}
                         latitude={result.lat}
                         longitude={result.long}
                     >
